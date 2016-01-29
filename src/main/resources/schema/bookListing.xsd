@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
-	targetNamespace="http://www.clael.org/bookService" 
-	xmlns:tns="http://www.clael.org/bookService" 
+	targetNamespace="http://www.clael.org/book/types" xmlns:tns="http://www.clael.org/book/types" 
 	elementFormDefault="qualified">
 
     <element name="BookServiceRequest"
