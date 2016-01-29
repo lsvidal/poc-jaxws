@@ -6,7 +6,7 @@
     <wsdl:types>
 	    <xsd:schema targetNamespace="http://www.clael.org/bookService">
 <!--     		<xsd:import namespace="http://www.clael.org/bookService" schemaLocation="../schema/bookService.xsd" /> -->
-    		<xsd:include schemaLocation="../schema/bookService.xsd" />
+    		<xsd:include schemaLocation="../schema/bookListing.xsd" />
     	</xsd:schema>	</wsdl:types>
 	
   	<wsdl:message name="BookServiceRequest">  	
