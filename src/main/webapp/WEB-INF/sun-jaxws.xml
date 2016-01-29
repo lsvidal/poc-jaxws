@@ -3,5 +3,5 @@
 	version="2.0">
 	<endpoint name="bookService"
 		implementation="org.clael.poc.ws.jettyws.service.BookServicePortImpl"
-		url-pattern="/bookService" />
+		url-pattern="/bookService.svc" />
 </endpoints>

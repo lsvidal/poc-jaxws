@@ -21,6 +21,7 @@
  	
  	<servlet-mapping>
  		<servlet-name>jaxws</servlet-name>
- 		<url-pattern>/bookService</url-pattern>
+ 		<url-pattern>*.svc</url-pattern>
  	</servlet-mapping>
  </web-app>
+ 
