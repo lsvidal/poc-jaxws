@@ -2,6 +2,6 @@
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
 	version="2.0">
 	<endpoint name="bookService"
-		implementation="org.clael.poc.ws.jettyws.service.BookServicePortImpl"
-		url-pattern="/bookService.svc" />
+		implementation="org.clael.poc.ws.jettyws.service.BookListing"
+		url-pattern="/bookListing.svc" />
 </endpoints>

@@ -6,26 +6,26 @@ import javax.jws.WebService;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 
-import org.clael.poc.ws.jettyws.BookServicePortType;
-import org.clael.poc.ws.jettyws.BookServiceRequestType;
-import org.clael.poc.ws.jettyws.BookServiceResponseType;
+import org.clael.poc.ws.jettyws.BookListingInterface;
+import org.clael.poc.ws.jettyws.BookListingRequestType;
+import org.clael.poc.ws.jettyws.BookListingResponseType;
 import org.clael.poc.ws.jettyws.BookType;
 
 @WebService
-public class BookServicePortImpl implements BookServicePortType {
+public class BookListing implements BookListingInterface {
 
 	@Override
-	public BookServiceResponseType fetchBooks(BookServiceRequestType bookServiceRequest) {
-		final BookServiceResponseType response = new BookServiceResponseType();
+	public BookListingResponseType fetchBooks(BookListingRequestType bookServiceRequest) {
+		final BookListingResponseType response = new BookListingResponseType();
 		
 		for (int i = 0 ; i < bookServiceRequest.getLimit() ; i++) {
 			final BookType book = new BookType();
-			book.setAuthor("Nietzsche" + i);
+			book.setAuthor("Nietzsche");
 			try {
 				book.setPublished(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(1891, 12, 11)));
 			} catch (DatatypeConfigurationException e) {				
 			}
-			book.setTitle("Thus Spake Zarathustra");
+			book.setTitle("Thus Spake Zarathustra " + i);
 			response.getBook().add(book);
 		}
 		return response;

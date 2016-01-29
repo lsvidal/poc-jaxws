@@ -3,18 +3,22 @@
 	targetNamespace="http://www.clael.org/book/types" xmlns:tns="http://www.clael.org/book/types" 
 	elementFormDefault="qualified">
 
-    <element name="BookServiceRequest"
-    	type="tns:BookServiceRequestType">
+    <element name="BookListingRequest"
+    	type="tns:BookListingRequestType">
+    </element>
+
+	<element name="BookListingResponse"
+    	type="tns:BookListingResponseType">
     </element>
     
-    <complexType name="BookServiceRequestType">
+        
+    <complexType name="BookListingRequestType">
     	<sequence>
     		<element name="limit" type="int"></element>
     	</sequence>
     </complexType>
 
-
-    <complexType name="BookServiceResponseType">
+    <complexType name="BookListingResponseType">
     	<sequence>
     		<element name="book" type="tns:BookType" maxOccurs="unbounded" minOccurs="0"></element>
     	</sequence>
@@ -31,9 +35,4 @@
     		<element name="published" type="date" maxOccurs="1" minOccurs="1"></element>
     	</sequence>
     </complexType>
-    
-
-    <element name="BookServiceResponse"
-    	type="tns:BookServiceResponseType">
-    </element>
 </schema>
