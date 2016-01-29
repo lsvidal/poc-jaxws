@@ -8,7 +8,7 @@
 
 
 	<properties>
-		<contextPath>/bookService</contextPath>
+		<contextPath>/bookApp</contextPath>
 		<server.port>9080</server.port>
 		<jdk.version>1.6</jdk.version>
 		<maven.build.timestamp.format>dd/MM/yyyy HH:mm</maven.build.timestamp.format>
